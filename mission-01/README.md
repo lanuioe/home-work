@@ -1,10 +1,7 @@
 # ✅ mission-01
 
----
-
 ## 1. HTML Markup
 
----
 <figure>
     <img src="./images/mission-01-markup.png">
 </figure>
@@ -36,7 +33,6 @@ main
 
 ## 2. 소스코드 설명
 
----
 
 ### # 마크업
 
@@ -100,8 +96,8 @@ transform으로 main의 x,y축을 -50% 옮김
 
 ```css
 .item-big .item-start, .item-big .item-end {
-	display: inline-block;
-	position: relative;
+  display: inline-block;
+  position: relative;
 }
 .item-big .item-start {
   bottom: 90px;
@@ -147,18 +143,17 @@ hover했을 때와 focus되었을 때 배경 이미지가 변경되도록 함
 
 ## 3. 느낀 점
 
----
 
 처음에, li 내에 배치한 요소들을 중앙정렬하기 위해서
 
 ```css
 <li class="item-02 item-small">
-	<div class="item-container">
+  <div class="item-container">
     <h2 class="item-logo"><img src="./images/product2-logo.png" alt="Kamill"></h2>
     <h3 class="item-title">핸드크림 모음</h3>
     <img src="./images/product2.png" alt="Kamill 핸드크림 클래식, 100ml, 3개입">
     <button type="button" class="buy-btn" aria-label="구매하기"></button>
-	</div>
+  </div>
 </li>
 ```
 
@@ -169,7 +164,6 @@ hover했을 때와 focus되었을 때 배경 이미지가 변경되도록 함
 
 ## 4. 궁금한 점
 
----
 
 1. 구매하기 버튼을 svg 이미지로 넣었을 때와, css로 만들었을 때 각각의 장단점 (주로 어떨 때 어떤 방식을 사용하는지)
 
