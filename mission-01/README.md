@@ -1,7 +1,5 @@
 # ✅ mission-01
 
----
-
 ## 1. HTML Markup
 
 <figure>
