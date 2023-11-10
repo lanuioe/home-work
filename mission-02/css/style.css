@@ -58,8 +58,10 @@ body {
 }
 
 .login-container {
+  /* margin: 0 8.5%; */
+  margin: 0 auto;
   padding-top: 110px;
-  margin: 0 8.5%;
+  width: 311px;
   letter-spacing: -0.32px;
 }
 
@@ -186,7 +188,7 @@ input[type=password]::placeholder {
   font-size: 1.2rem;
 }
 
-.is-warn ~ .warn-text {
+.is-invalid ~ .warn-text {
   display: block;
 }
 
@@ -224,6 +226,9 @@ input:checked + .save-email::before {
 
 /* 로그인, 회원가입 */
 .sign-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
   margin-top: 128px;
   font-size: 2rem;
   font-weight: 700;
@@ -258,7 +263,6 @@ input:checked + .save-email::before {
 
 .sign-up-container {
   position: relative;
-  margin-top: 15px;
   color: var(--color-white);
 }
 
@@ -278,4 +282,24 @@ input:checked + .save-email::before {
   right: 15px;
   transform: translateY(-50%);
   fill: currentColor;
+}
+
+/* 미디어 쿼리 */
+@media (min-width: 600px) {
+  .login-container {
+    padding-top: 145px;
+    width: 540px;
+    letter-spacing: -0.32px;
+  }
+
+  .sign-container {
+    margin-top: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px; 
+  }
+
+  .sign-in-container, .sign-up-container {
+    flex-grow: 1;
+  }
 }
