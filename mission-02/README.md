@@ -7,6 +7,8 @@
 
 ## 2. 동적 클래스 추가 결과 확인
 
+![validation1](https://github.com/lanuioe/home-work/assets/148831765/c10e759d-7a0d-4d26-a977-f77a8aeb3792)
+
 - <strong>input이 focus되었을 때, is-focus 클래스를 추가</strong><br />
 → label이 위로 올라가며 input의 placeholder가 보임
 
@@ -28,12 +30,16 @@
 
 <br />
 
+![validation2](https://github.com/lanuioe/home-work/assets/148831765/1b29045a-2f09-45f5-8fcd-d5cb5ba6fc90)
+
 - <strong>input이 올바르게 작성되지 않았을 때, is-invalid 클래스를 추가</strong><br />
 → 유효성 검사 warning 아이콘 표시 (email, password 동일)<br />
 → 경고 텍스트 표시
 
 - <strong>input이 올바르게 작성되었을 때, is-valid 클래스를 추가</strong><br />
 → 유효성 검사 check 아이콘 표시 (email, password 동일)
+
+<br />
 
 - <strong>input password에 작성을 시작했을 때, is-invisible 클래스를 추가</strong><br />
 → 비밀번호 보기(눈 뜬 모양) 아이콘 활성화: 작성시 기본으로 비밀번호가 보이지 않음
@@ -132,3 +138,30 @@
 |Mobile (max width: 600px)|Desktop (min width: 600px)|
 |------|---|
 |![ediya-mobile](https://github.com/lanuioe/home-work/assets/148831765/ce575601-40af-4124-973c-be521baaf111)|![ediya-desktop](https://github.com/lanuioe/home-work/assets/148831765/98eff127-30e9-4e83-99cb-a7dddbf37702)|
+
+  <details>
+  <summary>css 확인</summary>
+  <div markdown="1">
+
+  - 미디어 쿼리 사용
+    ```
+    @media (min-width: 600px) {
+    .  login-container {
+        padding-top: 145px;
+        width: 540px;
+      }
+  
+      .sign-container {
+        margin-top: 60px;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 20px; 
+      }
+      
+      .sign-in-container, .sign-up-container {
+        flex-grow: 1;
+      }
+    ```
+  
+  </div>
+  </details>
