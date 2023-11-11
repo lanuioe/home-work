@@ -58,7 +58,6 @@ body {
 }
 
 .login-container {
-  /* margin: 0 8.5%; */
   margin: 0 auto;
   padding-top: 110px;
   width: 311px;
@@ -130,16 +129,11 @@ input[type=password]::placeholder {
 }
 
 /* 로그인 폼 유효성 검사 */
-.login-container .is-vaild {
+input[type=email].is-valid, 
+input[type=email].is-invalid, 
+input[type=password].is-valid,
+input[type=password].is-invalid {
   box-shadow: 0 2px var(--color-white);
-}
-
-.login-container .is-invaild {
-  box-shadow: 0 2px var(--color-white);
-  
-  & + .warning {
-    display: block;
-  }
 }
 
 .login-container .is-focus {
@@ -157,6 +151,7 @@ input[type=password]::placeholder {
   width: 16px;
   height: 16px;
   border: 0;
+  background: transparent;
 }
 
 .is-valid ~ .validation.eye-icon,
@@ -168,12 +163,12 @@ input[type=password]::placeholder {
   background: url("../images/icon-valid-check.svg") 0 0 / cover;
 }
 
-.validation.eye-icon {
-  background: url("../images/icon-pwd-eye.svg") 0 0 / cover;
-}
-
 .is-visible ~ .validation.eye-icon {
   background: url("../images/icon-pwd-eye.svg") 16px 0 / cover;
+}
+
+.is-invisible ~ .validation.eye-icon {
+  background: url("../images/icon-pwd-eye.svg") 0 0 / cover;
 }
 
 .is-invalid ~ .validation.valid-icon {
@@ -239,7 +234,7 @@ input:checked + .save-email::before {
   color: var(--color-accent-amber);
 }
 
-.sign-in-container.is-active {
+.sign-in-container.is-valid {
   color: var(--color-primary-blue);
 
   & .sign-in {
