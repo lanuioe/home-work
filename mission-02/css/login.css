@@ -1,0 +1,43 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/mission-02/images/bg-signin.png") no-repeat 30% center / cover;
+  color: var(--color-white);
+}
+
+.login-container {
+  margin: 0 auto;
+  padding-top: 6.875em;
+  width: clamp(19.4em, 83%, 28em);
+  letter-spacing: -0.32px;
+}
+
+.login-container fieldset {
+  margin-top: 6.875em;
+  padding: 0;
+  border: 0;
+}
+
+.user-psd-container {
+  margin-top: 3.37em;
+}
+
+/* 미디어 쿼리 (데스크탑) */
+@media (min-width: 600px) {
+  .login-container {
+    padding-top: 9.06em;
+    width: clamp(33.75em, 37.5%, 43.75em);
+    letter-spacing: -0.32px;
+  }
+
+  .sign-container {
+    margin-top: 3.75em;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 1.25em; 
+  }
+
+  .sign-in-container, .sign-up-container {
+    flex-grow: 1;
+  }
+}

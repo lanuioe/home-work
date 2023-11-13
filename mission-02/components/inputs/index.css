@@ -1,0 +1,135 @@
+/* 이메일, 패스워드 인풋 */
+.user-input {
+  position: relative;
+}
+
+.user-label {
+  position: absolute;
+  top: 1.1em;
+  left: 0.5em;
+  display: inline-block;
+  width: 4em;
+  font-size: 1.125rem;
+}
+
+.user-input input[type=email],
+.user-input input[type=password] {
+  padding: 1.25em 0.5em 0.1875em;
+  width: 100%;
+  height: 3rem;
+  border: 0;
+  box-shadow: 0 0.5px var(--color-white);
+  background: transparent;
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
+.user-input input[type=email]::placeholder,
+.user-input input[type=password]::placeholder {
+  color: transparent;
+}
+
+.user-label.is-focus ~ input[type=email]::placeholder,
+.user-label.is-focus ~ input[type=password]::placeholder {
+  color: var(--color-white);
+  opacity: 0.7;
+}
+
+/* 폼 유효성 검사 */
+input[type=email].is-valid, 
+input[type=email].is-invalid, 
+input[type=password].is-valid,
+input[type=password].is-invalid {
+  box-shadow: 0 2px var(--color-white);
+}
+
+.user-input .is-focus {
+  top: 0;
+  left: 0;
+  font-size: 0.8125rem;
+  transition: all 0.3s;
+}
+
+.validation {
+  display: none;
+  position: absolute;
+  bottom: 0.3125em;
+  right: 0.5em;
+  width: 1em;
+  height: 1em;
+  border: 0;
+  background: transparent;
+}
+
+.is-valid ~ .psd-show,
+.is-valid ~ .psd-hide,
+.is-invalid ~ .psd-show,
+.is-invalid ~ .psd-hide {
+  right: 2.0625em;
+}
+
+.is-valid ~ .valid-pass {
+  display: inline-block;
+  background: url("/mission-02/images/icon-valid-check.svg") 0 0 / cover;
+}
+
+.is-invalid ~ .valid-fail {
+  display: inline-block;
+  background: url("/mission-02/images/icon-valid-check.svg") 1rem 0 / cover;
+}
+
+.is-visible ~ .psd-hide {
+  display: inline-block;
+  background: url("/mission-02/images/icon-pwd-eye.svg") 1rem 0 / cover;
+}
+
+.is-invisible ~ .psd-show {
+  display: inline-block;
+  background: url("/mission-02/images/icon-pwd-eye.svg") 0 0 / cover;
+}
+
+.warn-text {
+  display: none;
+  position: absolute;
+  margin-left: 0.7em;
+  top: 4.17em;
+  font-size: 0.75rem;
+}
+
+.is-invalid ~ .warn-text {
+  display: block;
+}
+
+/* 이메일 저장 체크박스 */
+input[type=checkbox]:focus ~ .save-email::before {
+  outline: 1px solid currentColor;
+  border-radius: 3px;
+}
+
+.save-email {
+  display: inline-block;
+  margin-top: 1.25em;
+  font-size: 0.75rem;
+}
+
+.save-email:hover {
+  cursor: pointer;
+}
+
+.save-email::before {
+  display: inline-block;
+  position: relative;
+  content: "";
+  top: 0.15em;
+  left: 0.15em;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  background: url("/mission-02/images/icon-btn-check.svg") no-repeat -0.935rem 0;
+  background-size: cover;
+}
+
+input:checked + .save-email::before {
+  background-position: 0.1rem 0;
+}
+

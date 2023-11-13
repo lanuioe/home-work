@@ -3,50 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="/mission-02/css/style.css">
   <title>EDIYA</title>
 </head>
 <body>
-  <!-- <header class="header">
-    <h1 class="logo">
-      <img src="./images/logo-text.svg" alt="Ediya Coffee">
-    </h1>
-  </header> -->
   <main class="main">
     <section class="login-container">
-      <h2 class="login-title">로그인</h2>
-      <p class="welcome-en" lang="en">Welcome, Ediya Coffee</p>
+      <h2 class="headline-title login-title">로그인</h2>
+      <p class="welcome-en" lang="en">welcome, ediya coffee</p>
       <p class="welcome-ko">이디야커피에 오신 것을 환영합니다.</p>
       <form action="#" class="login-form" method="get">
         <fieldset>
-          <legend class="sr-only">회원 로그인 폼</legend>
-          <div class="user-email">
-            <label for="user-email" class="label-email">이메일</label>
+          <div class="user-input user-email-container">
+            <label for="user-email" class="user-label label-email">이메일</label>
             <input type="email" class="" id="user-email" required name="user-email" placeholder="yamoo9@euid.dev">
-            <span class="validation valid-icon"></span>
+            <span class="validation valid-pass" aria-label="이메일 유효성 통과"></span>
+            <span class="validation valid-fail" aria-label="이메일 유효성 경고"></span>
             <p class="warn-text">이메일 입력 방법이 잘못되었습니다. &#40;예: user@domain.io&#41;</p>
           </div>
-          <div class="user-psd">
-            <label for="user-psd" class="label-psd">패스워드</label>
+          <div class="user-input user-psd-container">
+            <label for="user-psd" class="user-label label-psd">패스워드</label>
             <input type="password" class="" id="user-psd" required name="user-psd" minlength="6" placeholder="숫자, 영어 조합 6자 이상">
-            <button type="button" class="validation eye-icon"></button>
-            <span class="validation valid-icon"></span>
+            <button type="button" class="validation psd-show" aria-label="패스워드 보기"></button>
+            <button type="button" class="validation psd-hide" aria-label="패스워드 가리기"></button>
+            <span class="validation valid-pass" aria-label="패스워드 유효성 통과"></span>
+            <span class="validation valid-fail" aria-label="패스워드 유효성 경고"></span>
             <p class="warn-text">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</p>
           </div>
-          <input type="checkbox" id="save-email" name="chk-btn" class="sr-only">
-          <label for="save-email" class="save-email">이메일 저장</label>
+          <div class="checkbox-container">
+            <input type="checkbox" id="save-email" name="chk-btn" class="sr-only">
+            <label for="save-email" class="save-email">이메일 저장</label>
+          </div>
           <div class="sign-container">
-            <div class="sign-in-container">
-              <button type="submit" class="sign-in">로그인</button>
+            <div class="button-container sign-in-container">
+              <button type="submit" class="button sign-in-btn">로그인</button>
               <span class="icon-arrow-move">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 0L6.58667 1.41333L12.1733 7H0V9H12.1733L6.58667 14.5867L8 16L16 8L8 0Z" />
                 </svg>
               </span>
             </div>
-            <div class="sign-up-container">
-              <a href="#" class="sign-up">회원가입</a>
+            <div class="button-container sign-up-container">
+              <a href="#" class="button sign-up-btn">회원가입</a>
               <span class="icon-arrow-move">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 0L6.58667 1.41333L12.1733 7H0V9H12.1733L6.58667 14.5867L8 16L16 8L8 0Z" />

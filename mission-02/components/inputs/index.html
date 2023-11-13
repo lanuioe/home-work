@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/mission-02/css/style.css">
+  <title>인풋 컴포넌트</title>
+</head>
+<body>
+  <fieldset>
+    <div class="user-input user-email-container">
+      <label for="user-email" class="user-label label-email">이메일</label>
+      <input type="email" class="" id="user-email" required name="user-email" placeholder="yamoo9@euid.dev">
+      <span class="validation valid-pass" aria-label="이메일 유효성 통과"></span>
+      <span class="validation valid-fail" aria-label="이메일 유효성 경고"></span>
+      <p class="warn-text">이메일 입력 방법이 잘못되었습니다. &#40;예: user@domain.io&#41;</p>
+    </div>
+    <div class="user-input user-psd-container">
+      <label for="user-psd" class="user-label label-psd">패스워드</label>
+      <input type="password" class="" id="user-psd" required name="user-psd" minlength="6" placeholder="숫자, 영어 조합 6자 이상">
+      <button type="button" class="validation psd-show" aria-label="패스워드 보기"></button>
+      <button type="button" class="validation psd-hide" aria-label="패스워드 가리기"></button>
+      <span class="validation valid-pass" aria-label="패스워드 유효성 통과"></span>
+      <span class="validation valid-fail" aria-label="패스워드 유효성 경고"></span>
+      <p class="warn-text">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</p>
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" id="save-email" name="chk-btn" class="sr-only">
+      <label for="save-email" class="save-email">이메일 저장</label>
+    </div>
+  </fieldset>
+</body>
+</html>
