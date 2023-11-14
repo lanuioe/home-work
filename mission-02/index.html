@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/mission-02/css/style.css">
+  <link rel="stylesheet" href="/mission-02/css/login.css">
   <title>EDIYA</title>
 </head>
 <body>
@@ -17,8 +18,7 @@
           <div class="user-input user-email-container">
             <label for="user-email" class="user-label label-email">이메일</label>
             <input type="email" class="" id="user-email" required name="user-email" placeholder="yamoo9@euid.dev">
-            <span class="validation valid-pass" aria-label="이메일 유효성 통과"></span>
-            <span class="validation valid-fail" aria-label="이메일 유효성 경고"></span>
+            <span class="validation valid-icon"></span>
             <p class="warn-text">이메일 입력 방법이 잘못되었습니다. &#40;예: user@domain.io&#41;</p>
           </div>
           <div class="user-input user-psd-container">
@@ -26,8 +26,7 @@
             <input type="password" class="" id="user-psd" required name="user-psd" minlength="6" placeholder="숫자, 영어 조합 6자 이상">
             <button type="button" class="validation psd-show" aria-label="패스워드 보기"></button>
             <button type="button" class="validation psd-hide" aria-label="패스워드 가리기"></button>
-            <span class="validation valid-pass" aria-label="패스워드 유효성 통과"></span>
-            <span class="validation valid-fail" aria-label="패스워드 유효성 경고"></span>
+            <span class="validation valid-icon"></span>
             <p class="warn-text">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</p>
           </div>
           <div class="checkbox-container">
@@ -36,20 +35,24 @@
           </div>
           <div class="sign-container">
             <div class="button-container sign-in-container">
-              <button type="submit" class="button sign-in-btn">로그인</button>
-              <span class="icon-arrow-move">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 0L6.58667 1.41333L12.1733 7H0V9H12.1733L6.58667 14.5867L8 16L16 8L8 0Z" />
-                </svg>
-              </span>
+              <button type="submit" class="button sign-in-btn">
+                로그인
+                <span class="icon-arrow-move">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 0L6.58667 1.41333L12.1733 7H0V9H12.1733L6.58667 14.5867L8 16L16 8L8 0Z" />
+                  </svg>
+                </span>
+              </button>
             </div>
             <div class="button-container sign-up-container">
-              <a href="#" class="button sign-up-btn">회원가입</a>
-              <span class="icon-arrow-move">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 0L6.58667 1.41333L12.1733 7H0V9H12.1733L6.58667 14.5867L8 16L16 8L8 0Z" />
-                </svg>
-              </span>
+              <a href="#" class="button sign-up-btn">
+                회원가입
+                <span class="icon-arrow-move">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 0L6.58667 1.41333L12.1733 7H0V9H12.1733L6.58667 14.5867L8 16L16 8L8 0Z" />
+                  </svg>
+                </span>
+              </a>
             </div>
           </div>
         </fieldset>

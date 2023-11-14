@@ -27,7 +27,6 @@
   .login-container {
     padding-top: 9.06em;
     width: clamp(33.75em, 37.5%, 43.75em);
-    letter-spacing: -0.32px;
   }
 
   .sign-container {

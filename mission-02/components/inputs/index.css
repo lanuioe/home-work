@@ -68,12 +68,12 @@ input[type=password].is-invalid {
   right: 2.0625em;
 }
 
-.is-valid ~ .valid-pass {
+.is-valid ~ .valid-icon {
   display: inline-block;
   background: url("/mission-02/images/icon-valid-check.svg") 0 0 / cover;
 }
 
-.is-invalid ~ .valid-fail {
+.is-invalid ~ .valid-icon {
   display: inline-block;
   background: url("/mission-02/images/icon-valid-check.svg") 1rem 0 / cover;
 }
