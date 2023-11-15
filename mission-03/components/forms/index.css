@@ -1,0 +1,163 @@
+body {
+  background: rgb(155, 185, 165);
+}
+
+.component-container {
+  margin: 100px 50px;
+}
+
+/* focus custom */
+.lang:focus,
+.user-email:focus,
+.login-btn:focus,
+.free-btn:focus {
+  outline: 0.1875em solid var(--green--500);
+  border-color: transparent;
+}
+
+/* 언어 선택 박스 */
+.lang {
+  position: relative;
+  padding-left: 0.9375em;
+  width: 7.0625em;
+  height: 1.875em;
+  border: 1px solid var(--gray--500);
+  border-radius: 0.125em;
+  background: url('/images/svg/icon-global.svg') no-repeat 10% 50%,
+  url('/images/svg/icon-dropdown.svg') no-repeat 90% 50%;
+  cursor: pointer;
+}
+
+.selected-option {
+  position: absolute;
+  top: 50%;
+  left: 2em;
+  color: var(--gray--500);
+  line-height: 1.2;
+  transform: translateY(-50%);
+}
+
+.option-container {
+  display: none;
+  padding: 0.9375em 0 0.9375em 2.1875em;
+  position: relative;
+  top: -10px;
+  left: -12px;
+  width: 7.5em;
+  border-radius: 12px;
+  background: #E3E3E3F5;
+  color: var(--black);
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: -0.008px;
+  white-space: nowrap;
+}
+
+.option-container .option {
+  position: relative;
+  margin: 0.1875em 0;
+}
+
+.option-container .option:focus {
+  outline: 0;
+}
+
+.option-container .option:focus::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -1.125em;
+  width: 0.75em;
+  height: 0.75em;
+  background: url('/images/svg/icon-check.svg') no-repeat 0 0 / 100%;
+  transform: translateY(-50%);
+}
+
+.lang.is-focus .option-container {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .lang {
+    height: 2.5em;
+  }
+}
+
+
+/* 로그인 버튼 */
+.login-btn {
+  display: inline-block;
+  padding: 0.5em 1.12em;
+  min-width: max-content;
+  border-radius: 4px;
+  background: var(--red--500);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.006px;
+}
+
+@media (min-width: 768px) {
+  .login-btn {
+    padding: 0.5em 0.81em;
+    font-size: 1rem;
+    letter-spacing: -0.008px;
+  }
+}
+
+
+/* 이메일 주소 입력 폼 */
+.user-email {
+  padding: 0.715em 1.43em;
+  min-width: max-content;
+  width: 100%;
+  border: 0;
+  border-radius: 3em;
+  font-size: 0.875rem;
+}
+
+.user-email::placeholder {
+  flood-color: var(--gray--500);
+}
+
+.free-btn {
+  background: var(--red--500);
+  min-width: max-content;
+  height: 40px;
+  padding: 0 20px; 
+  border: 0;
+  border-radius: 3em;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.007px;
+}
+
+.free-btn::after {
+  display: inline-block;
+  content: "";
+  margin-left: 0.455em;
+  width: 22px;
+  height: 15px;
+  background: url('/images/svg/icon-arrow.svg') no-repeat 0 0 / 100%;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .user-email {
+    padding: 1.125em 1.25em;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    font-size: 1em;
+}
+
+  .free-btn {
+    height: 60px;
+    border-radius: 0;
+    font-size: 1.375rem;
+    line-height: 1.2;
+  }
+}

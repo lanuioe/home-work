@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>폼/버튼 컴포넌트</title>
+</head>
+<body>
+  <!-- 언어 선택 박스 -->
+  <div class="component-container">
+    <div class="lang" role="combobox" tabindex="0" aria-expanded="false">
+      <span class="selected-option">한국어</span>
+      <ul class="option-container" role="listbox">
+        <li class="option ko" tabindex="0">한국어</li>
+        <li class="option en" tabindex="0">English</li>
+      </ul>
+    </div>
+  </div>
+  <!-- 로그인 버튼 -->
+  <div class="component-container">
+    <a href="#" class="login-btn">로그인</a>
+  </div>
+  <!-- 이메일 주소 입력 폼 -->
+  <div class="component-container">
+    <form action="#">
+      <label for="user-email" class="sr-only">이메일</label>
+      <input type="email" class="user-email" id="user-email" required name="user-email" placeholder="이메일 주소">
+      <button type="submit" class="free-btn">30일 무료 이용</button>
+    </form>
+  </div>
+
+
+</body>
+</html>
