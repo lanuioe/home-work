@@ -1,7 +1,3 @@
-body {
-  background: rgb(155, 185, 165);
-}
-
 .component-container {
   margin: 100px 50px;
 }
@@ -19,6 +15,7 @@ body {
 .lang {
   position: relative;
   padding-left: 0.9375em;
+  min-width: 113px;
   width: 7.0625em;
   height: 1.875em;
   border: 1px solid var(--gray--500);
