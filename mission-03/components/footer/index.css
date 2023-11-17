@@ -12,6 +12,12 @@
   letter-spacing: -0.01px;
 }
 
+@media (max-width: 767px) {
+  .contact-info span {
+    display: block;
+  }  
+}
+
 .footer-nav ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -61,10 +67,6 @@
 @media (min-width: 768px) {
   .footer {
     padding: 50px 12%;
-  }
-
-  .contact-info p {
-    display: inline-block;
   }
 
   .footer-nav ul {
