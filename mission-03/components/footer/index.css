@@ -52,9 +52,9 @@
 }
 
 .footer a:focus {
-  outline: 0.1875em solid var(--green--500);
+  outline: 3px solid var(--green--500);
   border-color: transparent;
-  border-radius: 0.125em;
+  border-radius: 2px;
 }
 
 

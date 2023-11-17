@@ -2,13 +2,21 @@
   margin: 100px 50px;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* focus custom */
+.lang.lang.is-focus,
 .lang:focus,
-.user-email:focus,
-.login-btn:focus,
-.free-btn:focus {
-  outline: 0.1875em solid var(--green--500);
+.free-btn:focus,
+.login-btn:focus {
+  outline: 3px solid var(--green--500);
   border-color: transparent;
+}
+
+.user-email:focus {
+  outline: 0;
 }
 
 /* 언어 선택 박스 */
@@ -17,7 +25,6 @@
   padding-left: 0.9375em;
   min-width: 113px;
   width: 7.0625em;
-  /* height: 1.875em; */
   height: 2.5em;
   border: 1px solid var(--gray--500);
   border-radius: 0.125em;
@@ -76,12 +83,12 @@
   display: block;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 767px) {
   .header .lang {
     height: 1.875em;
+  }
 }
-}
-
 
 /* 로그인 버튼 */
 .login-btn {
@@ -104,19 +111,45 @@
   }
 }
 
-
 /* 이메일 주소 입력 폼 */
+.promotion-form {
+  position: relative;
+}
+
+.user-email-label {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: var(--gray--500);
+}
+
+.user-email::placeholder {
+  color: transparent;
+}
+
+.user-email-label.is-focus ~ 
+.user-email::placeholder {
+  color: var(--gray--500);
+}
+
 .user-email {
   padding: 0.715em 1.43em;
   min-width: max-content;
   width: 100%;
   border: 0;
   border-radius: 3em;
+  color: var(--gray--800);
   font-size: 0.875rem;
 }
 
-.user-email::placeholder {
-  flood-color: var(--gray--500);
+.warn-text {
+  display: none;
+  position: relative;
+  top: 5px;
+  left: 20px;
+  color: var(--red--500);
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .free-btn {
@@ -143,19 +176,74 @@
   vertical-align: middle;
 }
 
+/* state */
+.user-email-label.is-focus {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red--500);
+  top: -22px;
+}
+
+.user-email-label.is-focus ~ .free-btn {
+  outline: 3px solid var(--green--500);
+  border-color: transparent;
+  background-color: var(--red--600);
+}
+
+.user-email.is-invalid ~ .warn-text {
+  display: block;
+}
+
+.user-email.is-invalid {
+  outline: 3px solid var(--red--500);
+  border-color: transparent;
+}
+
+.user-email-label.is-focus ~ .user-email.is-invalid ~ .free-btn {
+  outline: 0;
+  border-color: transparent;
+}
+
+.user-email.is-disabled ~ .free-btn{
+  background: var(--gray--500);
+}
+
 @media (min-width: 768px) {
+  .user-email-label {
+    top: 20px;
+  }
+
   .user-email {
-    padding: 1.125em 1.25em;
-    width: 100%;
-    border: 0;
+    padding-top: 1.652em;
+    padding-bottom: 0.625em;
     border-radius: 0;
     font-size: 1em;
-}
+  }
+
+  .warn-text {
+    position: absolute;
+    top: 65px;
+  }
 
   .free-btn {
     height: 60px;
     border-radius: 0;
     font-size: 1.375rem;
     line-height: 1.2;
+  }
+  
+  /* state */
+  .user-email-label.is-focus {
+    top: 10px;
+  }
+
+  .user-email.is-invalid {
+    outline: 0;
+    border-bottom: 3px inset var(--red--500);
+  }
+
+  .user-email-label.is-focus ~ .user-email.is-invalid ~ .free-btn {
+    outline: 0;
+    border-color: transparent;
   }
 }
