@@ -1,0 +1,86 @@
+.footer {
+  background: var(--black);
+  padding: 40px 7%;
+  border-top: 4px solid var(--gray--800);
+}
+
+.contact-info {
+  color: var(--gray--200);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.01px;
+}
+
+.footer-nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 0.714em;
+  margin: 1.87em 0 3.643em;
+  color: var(--gray--300);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.footer-nav li {
+  min-width: max-content;
+}
+
+.address {
+  padding-top: 1.875em;
+}
+
+.address .company {
+  color: var(--gray--300);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.address .company-details {
+  margin-top: 0.714em;
+  color: var(--gray--400);
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.008px;
+}
+
+.footer a:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.footer a:focus {
+  outline: 0.1875em solid var(--green--500);
+  border-color: transparent;
+  border-radius: 0.125em;
+}
+
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 50px 12%;
+  }
+
+  .contact-info p {
+    display: inline-block;
+  }
+
+  .footer-nav ul {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1em;
+    margin: 3.125em 0 2.875em;
+    line-height: 1.2;
+    font-size: 1rem;
+  }
+
+  .address .company {
+    font-size: 1.375rem;
+  }
+
+  .address .company-details {
+    margin-top: 1em;
+    font-size: 1rem;
+  }
+}
