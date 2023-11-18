@@ -15,10 +15,6 @@ button {
   border-color: transparent;
 }
 
-.user-email:focus {
-  outline: 0;
-}
-
 /* 언어 선택 박스 */
 .lang {
   position: relative;
@@ -136,29 +132,34 @@ button {
   padding: 0.715em 1.43em;
   min-width: max-content;
   width: 100%;
+  height: 40px;
   border: 0;
   border-radius: 3em;
   color: var(--gray--800);
   font-size: 0.875rem;
 }
 
+.user-email:focus {
+  outline: 0;
+}
+
 .warn-text {
   display: none;
   position: relative;
   top: 5px;
-  left: 20px;
+  left: -38px;
   color: var(--red--500);
   font-size: 0.875rem;
   font-weight: 700;
 }
 
 .free-btn {
-  background: var(--red--500);
   min-width: max-content;
   height: 40px;
   padding: 0 20px; 
   border: 0;
   border-radius: 3em;
+  background: var(--red--500);
   color: #fff;
   font-size: 0.875rem;
   font-weight: 700;
@@ -176,18 +177,17 @@ button {
   vertical-align: middle;
 }
 
+.free-btn:hover,
+.free-btn:focus {
+  background: var(--red--600);
+}
+
 /* state */
 .user-email-label.is-focus {
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--red--500);
   top: -22px;
-}
-
-.user-email-label.is-focus ~ .free-btn {
-  outline: 3px solid var(--green--500);
-  border-color: transparent;
-  background-color: var(--red--600);
 }
 
 .user-email.is-invalid ~ .warn-text {
@@ -204,7 +204,7 @@ button {
   border-color: transparent;
 }
 
-.user-email.is-disabled ~ .free-btn{
+.promotion-form .user-email.is-disabled ~ .free-btn{
   background: var(--gray--500);
 }
 
@@ -216,13 +216,15 @@ button {
   .user-email {
     padding-top: 1.652em;
     padding-bottom: 0.625em;
+    height: 60px;
     border-radius: 0;
     font-size: 1em;
-  }
+}
 
   .warn-text {
     position: absolute;
     top: 65px;
+    left: 20px;
   }
 
   .free-btn {
@@ -239,11 +241,10 @@ button {
 
   .user-email.is-invalid {
     outline: 0;
-    border-bottom: 3px inset var(--red--500);
+    box-shadow: 0 -3px 0 0px var(--red--500) inset;
   }
 
-  .user-email-label.is-focus ~ .user-email.is-invalid ~ .free-btn {
-    outline: 0;
-    border-color: transparent;
+  .user-email.is-invalid ~ .free-btn {
+    background: var(--red--600);
   }
 }
