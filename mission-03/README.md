@@ -110,3 +110,20 @@
 |3-2. input|
 |------|
 |![input-state](https://github.com/lanuioe/home-work/assets/148831765/4c47c815-a435-43fa-aaff-8ca670842daf)|
+
+<br />
+
+## 4. 궁금한 점
+
+- ```select```를 사용했을 때 ```option``` 스타일링에 한계가 있어서 custom을 했는데, 마크업을 어떻게 짜는 것이 좋을 지 헷갈립니다.<br />
+  **```select``` 태그를 쓰지 않고 만들었을 때, ```select```와 비슷한 역할을 부여하려면** ```role```과 ```aria```를 어떻게 주어야 하는지..<br />
+  눌렀을 때 동작하는 거니까 ```div```에 ```role```을 주는 것보다는 ```button```을 쓰는 것이 나을까요?
+```
+  <div class="lang" role="combobox" tabindex="0" aria-expanded="false">
+    <span class="selected-option">한국어</span>
+    <ul class="option-container" role="listbox">
+      <li class="option ko" tabindex="0">한국어</li>
+      <li class="option en" tabindex="0">English</li>
+    </ul>
+  </div>
+```
