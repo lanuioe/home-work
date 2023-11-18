@@ -77,6 +77,10 @@
     font-size: 1rem;
   }
 
+  .address {
+    padding-top: 2.875em;
+  }
+
   .address .company {
     font-size: 1.375rem;
   }
