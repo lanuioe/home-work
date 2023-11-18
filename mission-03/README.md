@@ -118,12 +118,59 @@
 - ```select```를 사용했을 때 ```option``` 스타일링에 한계가 있어서 custom을 했는데, 마크업을 어떻게 짜는 것이 좋을 지 헷갈립니다.<br />
   **```select``` 태그를 쓰지 않고 만들었을 때, ```select```와 비슷한 역할을 부여하려면** ```role```과 ```aria```를 어떻게 주어야 하는지..<br />
   눌렀을 때 동작하는 거니까 ```div```에 ```role```을 주는 것보다는 ```button```을 쓰는 것이 나을까요?
-```
-  <div class="lang" role="combobox" tabindex="0" aria-expanded="false">
-    <span class="selected-option">한국어</span>
-    <ul class="option-container" role="listbox">
-      <li class="option ko" tabindex="0">한국어</li>
-      <li class="option en" tabindex="0">English</li>
-    </ul>
+  ```
+    <div class="lang" role="combobox" tabindex="0" aria-expanded="false">
+      <span class="selected-option">한국어</span>
+      <ul class="option-container" role="listbox">
+        <li class="option ko" tabindex="0">한국어</li>
+        <li class="option en" tabindex="0">English</li>
+      </ul>
+    </div>
+  ```
+<br />
+
+- **배경이미지가 ```header```와 ```main``` 영역에 모두 보이게 할 때**, ①번과 ②번 중에 어떤 방법이 더 나을까요? <br />
+
+  ① ```header```와 ```main```을 감싼 영역에 배경 넣기
+  <details>
+    <summary>html 코드</summary>
+    <div markdown="1">
+    
+      <div class="bg-wrap"> <-- 추가된 부분 -->
+        <header class="header">
+          ...
+        </header>
+        <main class="main">
+            ...
+        </main>
+      </div>
+      <footer>
+        ...
+      </footer>
+    
+    </div>
+  </details>
+
+  <br />
+
+  ② ```main```에 배경을 넣고, ```header```를 ```position: absolute``` 등으로 띄워주기
+  <details>
+  <summary>html 코드</summary>
+  <div markdown="1">
+  
+    ```
+    <header class="header">
+      ...
+    </header>
+    <main class="main">
+      <div class="main-container"> <-- 추가된 부분 -->
+        ...
+      </div>
+    </main>
+    <footer>
+      ...
+    </footer>
+    ```
+  
   </div>
-```
+  </details>
